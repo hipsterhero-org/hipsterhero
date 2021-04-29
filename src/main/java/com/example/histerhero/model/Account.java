@@ -1,6 +1,7 @@
 package com.example.histerhero.model;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 @Table(name="account")
@@ -8,7 +9,14 @@ public class Account implements SObject{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private String id;
+    @Column(name = "isdeleted")
+    private boolean isDeleted;
+    @Column(name = "name")
+    private String name;
+    @Column(name = "systemmodstamp")
+    private Date systemModsStam;
+
 
     public Account() {}
 
@@ -20,8 +28,32 @@ public class Account implements SObject{
                 id);
     }
 
-    public Long getId() {
-        return id;
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public boolean isDeleted() {
+        return isDeleted;
+    }
+
+    public void setDeleted(boolean deleted) {
+        isDeleted = deleted;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Date getSystemModsStam() {
+        return systemModsStam;
+    }
+
+    public void setSystemModsStam(Date systemModsStam) {
+        this.systemModsStam = systemModsStam;
     }
 
 }
