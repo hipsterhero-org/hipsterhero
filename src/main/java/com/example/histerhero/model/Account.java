@@ -3,6 +3,7 @@ package com.example.histerhero.model;
 import javax.persistence.*;
 
 @Entity
+@Table(name="account")
 public class Account implements SObject{
 
     @Id
@@ -15,7 +16,7 @@ public class Account implements SObject{
     @Override
     public String toString() {
         return String.format(
-                "Customer[id=%d, firstName='%s', lastName='%s']",
+                "ACcount[id=%d']",
                 id);
     }
 
