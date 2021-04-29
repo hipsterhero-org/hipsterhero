@@ -19,7 +19,7 @@ public class AccountController {
         return accountDAO.findAll();
     }
 
-    @GetMapping("/createDummyData")
+    /*@GetMapping("/createDummyData")
     public String createDummy(){
         for(int i =0 ; i < 10000 ; i ++){
             Account a = new Account();
@@ -32,5 +32,5 @@ public class AccountController {
             accountDAO.save(a);
         }
         return "I did create a lot of dummy records!";
-    }
+    }*/
 }
