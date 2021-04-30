@@ -1,12 +1,11 @@
 package com.example.histerhero.model;
 
 import javax.persistence.*;
-import java.io.Serializable;
 import java.util.Date;
 
 @Entity
 @Table
-public class Account implements SObject {
+public class Contact implements SObject{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -15,13 +14,8 @@ public class Account implements SObject {
     private String name;
     private Date systemModsStam;
 
-    public Account() {}
-
-    @Override
-    public String toString() {
-        return String.format(
-                "ACcount[id=%d']",
-                id);
+    public String getId() {
+        return id;
     }
 
     public void setId(String id) {
@@ -51,5 +45,7 @@ public class Account implements SObject {
     public void setSystemModsStam(Date systemModsStam) {
         this.systemModsStam = systemModsStam;
     }
+
+
 
 }
